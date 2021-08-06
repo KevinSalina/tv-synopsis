@@ -1,8 +1,6 @@
-html 
-  head
-    link(rel = 'stylesheet' href = '/css/styles.css')
-  body 
-    h1= showTitle
+include partials/head.pug
+    h1
+      a(href = '/') #{showTitle}
     div 
       h2 Season #{season.number}
       div(class = 'season-table')
