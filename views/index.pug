@@ -1,0 +1,22 @@
+include partials/head.pug
+      h1 
+         a(href = '/') #{show.title}
+      div
+        h2(class = "index-h2") Developed By
+        p
+          ul  
+            for person in show.developedBy
+              li= person 
+        h2(class = "index-h2") Starring 
+        p 
+          ul 
+            for person in show.starring 
+              li= person
+        h2(class = "index-h2") Seasons 
+        p 
+          ul
+            for season in show.seasons 
+              li 
+                a(href = '/season/' + season.number) Season #{season.number}
+
+      

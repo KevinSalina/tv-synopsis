@@ -1,0 +1,18 @@
+include partials/head.pug
+    h1
+      a(href = '/') #{showTitle}
+    div 
+      h2 Season #{season.number}
+      div(class = 'season-table')
+        div(class = 'season-table-header')
+          div(class = 'episode-table-header episode-number-header') No.
+          div(class = 'episode-table-header episode-title-header') Title
+          div(class = 'episode-table-header episode-director-header') Director
+        for episode in season.episodes  
+          div(class = 'episode')
+            div(class = 'episode-top')
+              div= episode.number 
+              div= episode.title
+              div= episode.director 
+            div(class = 'episode-bottom')
+              div= episode.synopsis  
